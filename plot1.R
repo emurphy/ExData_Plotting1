@@ -12,4 +12,4 @@ df$Date = as.Date(df$Date, "%d/%m/%Y")
 
 df <- df[df$Date == "2007-02-01" | df$Date == "2007-02-02",]
 
-with(df, hist(Global_active_power, col="red"))
+with(df, hist(Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)"))
