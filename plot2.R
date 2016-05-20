@@ -8,6 +8,7 @@ if (!file.exists("household_power_consumption.txt")) {
 }
 
 df <- fread("household_power_consumption.txt", na.strings="?")
+
 df$DateType = as.Date(df$Date, "%d/%m/%Y")
 df <- df[df$DateType == "2007-02-01" | df$DateType == "2007-02-02",]
 
